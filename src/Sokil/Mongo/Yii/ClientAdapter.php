@@ -54,7 +54,7 @@ class ClientAdapter extends \CApplicationComponent
         $this->_mongoClient = new \Sokil\Mongo\Client($this->_dsn, $this->_options);
         
         if($this->_loggerSectionName) {
-            $this->_mongoClient->setLogger(Yii::app()->{$this->_loggerSectionName});
+            $this->_mongoClient->setLogger(\Yii::app()->{$this->_loggerSectionName});
         }
         
         return $this->_mongoClient;

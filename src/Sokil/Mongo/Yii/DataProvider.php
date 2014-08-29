@@ -18,7 +18,7 @@ class DataProvider extends \CDataProvider
     {
         // name of collection
         if (is_string($dataSource)) {
-            $collection = Yii::app()->mongo->getCollection($dataSource);
+            $collection = \Yii::app()->mongo->getCollection($dataSource);
             $this->_queryBuilder = $collection->find();
         }
         // query builder
