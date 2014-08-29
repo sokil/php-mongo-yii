@@ -1,0 +1,14 @@
+{
+    "name": "sokil/php-mongo-yii",
+    "description": "PHPMongo Yii Adapter",
+    "require": {
+        "sokil/php-mongo": "1.2.4"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dmytro Sokil",
+            "email": "dmytro.sokil@gmail.com"
+        }
+    ]
+}
