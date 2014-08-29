@@ -2,7 +2,7 @@
 
 namespace Sokil\Mongo\Yii;
 
-class DataProvider extends CDataProvider
+class DataProvider extends \CDataProvider
 {
     public $attributes;
     

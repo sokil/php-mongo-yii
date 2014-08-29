@@ -2,7 +2,7 @@
 
 namespace Sokil\Mongo\Yii;
 
-class LogRoute extends CLogRoute 
+class LogRoute extends \CLogRoute 
 {
     protected function processLogs($logs) 
     {

@@ -2,7 +2,7 @@
 
 namespace Sokil\Mongo\Yii;
 
-class ClientAdapter extends CApplicationComponent
+class ClientAdapter extends \CApplicationComponent
 {
     private $_dsn;
     
