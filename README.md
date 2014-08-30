@@ -50,3 +50,26 @@ return array(
 ```
 
 For PSR compartible logger you can use adapter to Yii's log https://gist.github.com/sokil/56654a5abdfbcce411ea or [Monolog](https://github.com/Seldaek/monolog)
+
+Routing Yii logs to mongo
+-------------------------
+
+```php
+<?php
+
+return array(
+    'components' => array(
+        // configure log service
+        'log' => array(
+            'class' => 'CLogRouter',
+            'routes' => array(
+                array(
+                    'class' => '\Sokil\Mongo\Yii\LogRoute',
+                    'levels' => 'error, warning',
+                ),
+            ),
+        ),
+    ),
+);
+        
+```
