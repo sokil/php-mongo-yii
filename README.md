@@ -73,6 +73,11 @@ Configure logger to use mongo:
 
 return array(
     'components' => array(
+        // define connection service
+        'mongo' => array(
+            'class' => '\Sokil\Mongo\Yii\ClientAdapter',
+            // ...
+        ),
         // configure log service
         'log' => array(
             'class' => 'CLogRouter',
@@ -80,6 +85,10 @@ return array(
                 array(
                     'class' => '\Sokil\Mongo\Yii\LogRoute',
                     'levels' => 'error, warning',
+                    // define collectin name where to store log records
+                    'collectionName'    => 'log',
+                    // define connection service to mongo used to record logs
+                    'serviceName'       => 'mongo',
                 ),
             ),
         ),
