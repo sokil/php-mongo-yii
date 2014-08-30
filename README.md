@@ -15,8 +15,8 @@ You can install library through Composer:
 }
 ```
 
-Configuration
--------------
+Configuration of Client
+-----------------------
 
 ```php
 <?php
@@ -34,8 +34,8 @@ return array(
             'defaultDatabase' => 'database_name',
             'map' => array(
                 'database_name' => array(
-                    'tableName1' => '\Collection\Class1',
-                    'tableName2' => '\Collection\Class2',
+                    'collectionName1' => '\Collection\Class1',
+                    'collectionName2' => '\Collection\Class2',
                 )
             ),
             'logger' => 'somePsrCompartibleLogService',
@@ -51,8 +51,22 @@ return array(
 
 For PSR compartible logger you can use adapter to Yii's log https://gist.github.com/sokil/56654a5abdfbcce411ea or [Monolog](https://github.com/Seldaek/monolog)
 
+Using mongo in code:
+
+```php
+<?php
+// get client
+$client = \Yii::app()->mongo->getClient();
+// get database
+$database = \Yii::app()->mongo->getDatabase('database_name');
+// get collection of default database
+$collection = \Yii::app()->mongo->getCollection('collectionName1');
+```
+
 Routing Yii logs to mongo
 -------------------------
+
+Configure logger to use mongo:
 
 ```php
 <?php
@@ -72,4 +86,20 @@ return array(
     ),
 );
         
+```
+
+Data Provider
+-------------
+
+```php
+<?php
+
+// get cursor
+$cursor = Yii::app()->mongo->getCollection('collName')->find()->where('type', 10);
+
+// get data provider
+$dataProvider = new \Sokil\Mongo\Yii\DataProvider($cursor, array(
+    'attributes' => array('name', 'type'),
+    'pagination' => array('pageSize' => 30)
+));
 ```
