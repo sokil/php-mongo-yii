@@ -49,4 +49,4 @@ return array(
 );
 ```
 
-For PSR compartible logger you can use adapter to Yii's log https://gist.github.com/sokil/56654a5abdfbcce411ea or https://github.com/Seldaek/monolog
+For PSR compartible logger you can use adapter to Yii's log https://gist.github.com/sokil/56654a5abdfbcce411ea or [Monolog](https://github.com/Seldaek/monolog)
