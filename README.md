@@ -85,7 +85,7 @@ return array(
                 array(
                     'class' => '\Sokil\Mongo\Yii\LogRoute',
                     'levels' => 'error, warning',
-                    // define collectin name where to store log records
+                    // define collection name where to store log records
                     'collectionName'    => 'log',
                     // define mongo connection service used to record logs
                     'serviceName'       => 'mongo',
