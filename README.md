@@ -87,7 +87,7 @@ return array(
                     'levels' => 'error, warning',
                     // define collectin name where to store log records
                     'collectionName'    => 'log',
-                    // define connection service to mongo used to record logs
+                    // define mongo connection service used to record logs
                     'serviceName'       => 'mongo',
                 ),
             ),
