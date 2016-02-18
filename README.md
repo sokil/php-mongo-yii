@@ -1,7 +1,7 @@
 php-mongo-yii
 =============
 
-Yii PHPMongo Adapter
+Yii Adapter for [PHPMongo ORM](https://github.com/sokil/php-mongo)
 
 Installation
 ------------
