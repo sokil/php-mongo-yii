@@ -22,7 +22,7 @@ class DataProvider extends \CDataProvider
             $this->_queryBuilder = $collection->find();
         }
         // query builder
-        else if ($dataSource instanceof \Sokil\Mongo\QueryBuilder) {
+        else if ($dataSource instanceof \Sokil\Mongo\Cursor) {
             $this->_queryBuilder = $dataSource;
         }
 
